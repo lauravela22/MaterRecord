@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>NMHR</title>
+    <link href="../public/css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="../public/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".username").focus(function () {
+                $(".user-icon").css("left", "-48px");
+            });
+            $(".username").blur(function () {
+                $(".user-icon").css("left", "0px");
+            });
+
+            $(".password").focus(function () {
+                $(".pass-icon").css("left", "-48px");
+            });
+            $(".password").blur(function () {
+                $(".pass-icon").css("left", "0px");
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+   
+
+        <!--WRAPPER-->
+        <div id="wrapper">
+
+            <!--SLIDE-IN ICONS-->
+            <div class="user-icon"></div>
+            <div class="pass-icon"></div>
+            <!--END SLIDE-IN ICONS-->
+ <div class="col-md-12" >
+            <!--LOGIN FORM-->
+            <form name="frmsesion" id="frmsesion" action="" class="login-form"> 
+
+                <!--HEADER-->
+                <div class="header">
+                    <center>
+                        <img src="../public/img/hse.png"  width="260px" /><br><br><hr style=" border: 1px inset #8F8F8F !important ">
+                        <br>
+                        <!--TITLE--><h1>NATIONAL MATERNITY HEALTHCARE RECORD</h1><!--END TITLE--></center>                    
+                    </div>
+
+
+
+                    <div class="content">
+                        <input name="user" type="text" class="input username"  placeholder="User" required /> 
+                        <input name="pass" type="password" class="input password"  placeholder="Password" required />
+                    </div>
+
+
+
+                    <div class="footer">
+                        <!--LOGIN BUTTON-->
+                        <center>
+                            <input type="button" name="loginForm" value="LOGIN" class="button" style="text-transform: uppercase" onclick="" />
+                        </center>
+                    </div>
+
+
+ </div>
+                </form>
+
+
+            </div>
+       
+
+    </body>
+    </html>

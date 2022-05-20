@@ -1,0 +1,64 @@
+<?php
+//use of sessions
+ob_start();
+session_start();
+
+if (!isset($_SESSION["user"]))
+{
+  header("Location: login.html");
+}else{
+
+require 'header.php';
+?>
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">        
+	<!-- Main content -->
+	<section class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box">
+					<div class="box-header with-border">
+						<h1 class="box-title">MEDICAL DIRECTORY</h1><br><br>
+						<div class="box-tools pull-right">
+						</div>
+					</div>
+					 
+					<!-- DIV TABLE  -->
+					<div class="panel-body table-responsive" id="listmeddirectory" style="overflow: auto !important;">
+						<table id="tbllistmed" class="table table-striped table-bordered table-condensed tale-hover">
+							<thead>
+								<th>Clinic</th>
+								<th>Telephone</th>
+								<th>Hospital Appointments</th>
+								<th>Focused Antenatal Care</th>
+							</thead>
+							<tbody></tbody>
+							<tfoot>
+								<th>Clinic</th>
+								<th>Telephone</th>
+								<th>Hospital Appointments</th>
+								<th>Focused Antenatal Care</th>
+							</tfoot>
+						</table>
+					</div>
+
+					<!--End center -->
+				</div><!-- /.box -->
+			</div><!-- /.col -->
+		</div><!-- /.row -->
+	</section><!-- /.content -->
+
+</div><!-- /.content-wrapper -->
+<!--End-Content-->
+
+<?php
+require 'footer.php';
+?>
+
+<script type="text/javascript" src="scripts/medicaldir.js"></script>
+
+<?php 
+}
+ob_end_flush();
+?>
